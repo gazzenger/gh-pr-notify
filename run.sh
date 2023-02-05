@@ -20,7 +20,7 @@ fi
 echo $latest_minute > $LAST_VALUE_FILE
 
 # standard filters
-STATE_FILTER=closed
+STATE_FILTER=open
 DRAFT_FILTER=false
 
 #printf 'Checking from %s to %s\n' $prev_value $latest_minute >> $LOG_FILE
