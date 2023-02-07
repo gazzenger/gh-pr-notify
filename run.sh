@@ -1,6 +1,11 @@
 #!/bin/bash
 #PAGER=""
 
+# Check for internet connection
+if [[ $(curl -s -D - http://www.gstatic.com/generate_204 2>/dev/null | head -1 | cut -d' ' -f 2) != "204" ]]; then
+    exit 1
+fi
+
 #LOG_FILE=./output.log
 LAST_VALUE_FILE=./last-value
 
